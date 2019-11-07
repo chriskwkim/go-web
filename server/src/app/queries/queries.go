@@ -1,9 +1,8 @@
 package queries
 
 import (
-	fields "app/queries/fields"
-
 	"github.com/graphql-go/graphql"
+	fields "app/queries/fields"
 )
 
 var RootQuery = graphql.NewObject(graphql.ObjectConfig{

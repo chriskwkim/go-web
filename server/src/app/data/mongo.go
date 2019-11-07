@@ -3,13 +3,8 @@ package mongo
 import (
 	"context"
 
-	"go.mongodb.org/mongo-driver/mongo"
-	"go.mongodb.org/mongo-driver/mongo/options"
+	"github.com/mongodb/mongo-go-driver/mongo"
 )
 
-// var Client, err = mongo.Connect(context.Background(), "mongodb://localhost:27017/goweb", nil)
-// Set client options
-var clientOptions = options.Client().ApplyURI("mongodb://localhost:27017")
-
-// Connect to MongoDB
-var Client, err = mongo.Connect(context.TODO(), clientOptions)
+// the docs are currently wrong and will tell you to use newClient instead of Connect
+var Client, err = mongo.Connect(context.Background(), "Mongo URI...", nil)
